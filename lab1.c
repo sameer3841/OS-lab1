@@ -4,9 +4,18 @@
 #include "lab1.h"
 
 char* readString(char* fileName){
-    return NULL;
+    char * dest;
+    dest = (char *) malloc(100);
+    FILE *fileptr;                          
+    fileptr = fopen(fileName, "r");   
+    fgets(dest, MAX_LINE_LEN, fileptr);
+    fclose( fileptr );
+    dest[strcspn(dest, "\n")] = '\0';
+    return dest;
 }
 
 char* mysteryExplode(const char* str){
-    return NULL;
+    int len = strlen(str);
+    int strlen = (len * (len ));
+    return str;
 }
