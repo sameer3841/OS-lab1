@@ -3,6 +3,7 @@
 #include <string.h>
 #include "lab1.h"
 
+
 char* readString(char* fileName){
     char * dest;
     dest = (char *) malloc(100);
@@ -15,7 +16,14 @@ char* readString(char* fileName){
 }
 
 char* mysteryExplode(const char* str){
-    int len = strlen(str);
-    int strlen = (len * (len ));
-    return str;
+
+    int len = ((strlen(str) * (strlen(str) + 1)) / 2) + 1;
+    char* ans = (char*)malloc(len);
+    ans[0] = '\0';
+
+    for(char* c = 0; c < strlen(str); c++){
+        strncat(ans,str,c);
+    }
+
+    return ans;
 }
