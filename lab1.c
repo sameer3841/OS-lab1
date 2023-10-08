@@ -20,7 +20,7 @@ char* mysteryExplode(const char* str){
     int len = ((strlen(str) * (strlen(str) + 1)) / 2) + 1;
     char* ans = (char*)malloc(len);
     memset(ans, '\0', len);
-    for(int c = 0; c < strlen(str); c++){
+    for(int c = 1; c <= strlen(str); c++){
         strncat(ans,str,c);
     }
     
