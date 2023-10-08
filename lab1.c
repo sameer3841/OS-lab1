@@ -19,11 +19,11 @@ char* mysteryExplode(const char* str){
 
     int len = ((strlen(str) * (strlen(str) + 1)) / 2) + 1;
     char* ans = (char*)malloc(len);
-    ans[0] = '\0';
+    memset(ans, '\0', len);
     for(int c = 0; c < strlen(str); c++){
-        strncpy(ans,str,c);
+        strncat(ans,str,c);
     }
-    ans[len - 1] = '\0';
+    
     return ans;
 }
 
